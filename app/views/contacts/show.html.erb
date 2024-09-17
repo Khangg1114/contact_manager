@@ -1,0 +1,21 @@
+<!-- app/views/contacts/show.html.erb -->
+<h1>Contact Details</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @contact.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @contact.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @contact.phone %>
+</p>
+
+<%= link_to 'Back', contacts_path %>
+<%= link_to 'Edit', edit_contact_path(@contact) %>
+<%= link_to 'Destroy', contact_path(@contact), method: :delete, data: { confirm: 'Are you sure?' } %>
